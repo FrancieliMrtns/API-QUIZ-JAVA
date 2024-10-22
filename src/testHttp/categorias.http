@@ -1,6 +1,4 @@
-@url = https://8080-francielimr-apiquizjava-55jrp622k8x.ws-us116.gitpod.io
-
-
+@url = https://psychic-doodle-r74xxqxg4v25vv5-8080.app.github.dev
 
 ###
 GET {{url}}/categorias
@@ -13,7 +11,7 @@ POST {{url}}/categorias
 Content-Type: application/json
 
 {
-    "nome": "Arquitetura de APIs 3 - Teste"
+    "nome": "Conhecimentos Gerais"
 }
 
 ###

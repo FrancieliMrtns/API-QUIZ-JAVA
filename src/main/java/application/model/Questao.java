@@ -1,17 +1,17 @@
 package application.model;
 
-import application.record.QuestaoDTO;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import application.record.QuestaoDTO;
+import jakarta.persistence.Column;
 
 @Entity
 @Table(name = "questoes")
@@ -28,9 +28,10 @@ public class Questao {
     @ManyToOne
     @JoinColumn(name = "id_categoria")
     private Categoria categoria;
-    
+
     public Questao(QuestaoDTO questao) {
         this.id = questao.id();
         this.enunciado = questao.enunciado();
+        this.categoria = new Categoria(questao.categoria());
     }
 }
